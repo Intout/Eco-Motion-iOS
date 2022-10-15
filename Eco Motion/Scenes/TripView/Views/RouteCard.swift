@@ -10,6 +10,7 @@ import SwiftUI
 struct RouteCard: View {
     
     var route: Route
+    var type: TravelMode
     var toText: String
     private let columns = [
         GridItem(.adaptive(minimum: 80))
@@ -18,28 +19,31 @@ struct RouteCard: View {
     var body: some View {
         VStack(alignment: .leading){
             Text("Route 1")
-                .font(.custom("Charter", size: 25)).bold()
+                .font(.custom("Charter", size: 20)).bold()
             Rectangle()
                 .frame(height: 2)
                 .foregroundColor(.gray)
-            HStack{
-                Text("Date:")
-                    .font(.custom("Charter", size: 20))
-                Spacer()
-                Text("\(route.legs?.first?.arrivalTime?.text ?? "-")")
-                    .font(.custom("Charter", size: 20)).bold()
+            if type == .transit{
+                HStack{
+                    Text("Date:")
+                        .font(.custom("Charter", size: 15))
+                        .foregroundColor(.gray)
+                    Spacer()
+                    Text("\(route.legs?.first?.arrivalTime?.text ?? "-")")
+                        .font(.custom("Charter", size: 15)).bold()
+                }
             }
             HStack{
                 Text("Duration:")
-                    .font(.custom("Charter", size: 20))
+                    .font(.custom("Charter", size: 15))
                 Spacer()
                 Text("\(route.legs?.first?.duration?.text ?? "-")")
-                    .font(.custom("Charter", size: 20)).bold()
+                    .font(.custom("Charter", size: 15)).bold()
             }
             
             VStack{
                 
-                if let legs = self.route.legs{
+                if let legs = self.route.legs, type == .transit{
                     ForEach(legs, id: \.id){ leg in
                     LazyVGrid(  columns: [
                         // 3
@@ -51,28 +55,32 @@ struct RouteCard: View {
                         if let steps = leg.steps {
                             ForEach(steps, id: \.id){ step in
                                 HStack{
-                                    
                                     if let mode = step.travelMode{
                                         switch mode{
                                         case .walking:
                                             Image(systemName: "figure.walk")
                                                 .resizable()
-                                                .frame(width: 30, height: 30)
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(.blue)
                                         case .transit:
                                             Image(systemName: "bus.fill")
                                                 .resizable()
-                                                .frame(width: 30, height: 30)
+                                                .frame(width: 20, height: 20)
+                                                .foregroundColor(.blue)
+                                        case .driving:
+                                            Image(systemName: "car.fill")
+                                                .resizable()
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(.blue)
                                             
                                         }
                                     }
                                     VStack(alignment: .leading ,spacing: 0){
                                         Text(step.duration?.text ?? "-")
-                                            .font(.custom("Charter", size: 20))
+                                            .font(.custom("Charter", size: 15))
                                         Image(systemName: "arrow.right")
                                             .resizable()
-                                            .frame(width: 40, height: 20)
+                                            .frame(width: 50, height: 15)
                                             .foregroundColor(.gray)
                                     }
                                 }
@@ -80,17 +88,19 @@ struct RouteCard: View {
                         }
                         Image(systemName: "mappin.circle.fill")
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.green)
                     }
                 }
             }
         }
-            Spacer()
-                .frame(height: 50)
+            if type == .transit{
+                Spacer()
+            }
             HStack{
                 Text("\(route.co2 ?? -1) kg/\(route.legs?.first?.distance?.text?.contains("km") ?? true ? "km" : "mi")")
-                    .font(.custom("Charter", size: 25)).bold()
+                    .font(.custom("Charter", size: 20)).bold()
+                    .foregroundColor(.gray)
                 Spacer()
             }
         }

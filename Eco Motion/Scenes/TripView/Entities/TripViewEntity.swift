@@ -8,6 +8,14 @@
 import Foundation
 
 // MARK: - TripModel
+
+struct AllTypeModel: Codable{
+    let transit: TripModel?
+    let driving: TripModel?
+    let walking: TripModel?
+    let bicycling: TripModel?
+}
+
 struct TripModel: Codable {
     let geocodedWaypoints: [GeocodedWaypoint]?
     let routes: [Route]?
@@ -103,6 +111,7 @@ struct Time: Codable {
 
 enum TimeZone: String, Codable {
     case europeIstanbul = "Europe/Istanbul"
+    case europeBerlin = "Europe/Berlin"
 }
 
 // MARK: - Distance
@@ -137,6 +146,8 @@ struct Step: Codable, Identifiable {
     }
 }
 
+           
+
 enum Maneuver: String, Codable {
     case turnLeft = "turn-left"
     case turnRight = "turn-right"
@@ -146,6 +157,18 @@ enum Maneuver: String, Codable {
     case turnSlightLeft = "turn-slight-left"
     case roundaboutRight = "roundabout-right"
     case roundaboutLeft = "roundabout-Left"
+    case keepRight = "keep-right"
+    case keepLeft = "keep-left"
+    case uTurnLeft = "uturn-left"
+    case uTurnRight = "uturn-right"
+    case straight = "straight"
+    case rampLeft = "ramp-left"
+    case rampRight = "ramp-right"
+    case merge, ferry
+    case forkLeft = "fork-left"
+    case forkRight = "fork-right"
+    case ferryTrain = "ferry-train"
+    
 }
 
 // MARK: - Polyline
@@ -207,6 +230,7 @@ struct Vehicle: Codable {
 enum TravelMode: String, Codable {
     case transit = "TRANSIT"
     case walking = "WALKING"
+    case driving = "DRIVING"
 }
 
 // MARK: - Encode/decode helpers

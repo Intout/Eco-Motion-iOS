@@ -15,15 +15,15 @@ enum DataModelError: Error{
 extension TripView{
     class NetworkModel{
         
-        func getRoutesFromCoordinates(to: CLLocationCoordinate2D, from: CLLocationCoordinate2D, completionHandler: @escaping (TripModel?, Error?) -> Void){
+        func getRoutesFromCoordinates(to: CLLocationCoordinate2D, from: CLLocationCoordinate2D, completionHandler: @escaping (AllTypeModel?, Error?) -> Void){
             
-            guard let url = URL(string: "https://eco-motion.azurewebsites.net/api/maps?origin=\(Float(to.latitude)),\(Float(to.longitude))&destination=\(Float(from.latitude)),\(Float(from.longitude))&mode=transit&alternatives=true") else {
+            guard let url = URL(string: "https://eco-motion.azurewebsites.net/api/maps?origin=\(Float(from.latitude)),\(Float(from.longitude))&destination=\(Float(to.latitude)),\(Float(to.longitude))") else {
                 completionHandler(nil, URLError.badURL as? Error)
                 return
             }
             print("https://eco-motion.azurewebsites.net/api/maps?origin=\(Float(to.latitude)),\(Float(to.longitude))&destination=\(Float(from.latitude)),\(Float(from.longitude))&mode=transit&alternatives=true")
             var request = URLRequest(url: url)
-            request.httpMethod = "GET_TRANSIT"
+            request.httpMethod = "GET_ALL_ROADS"
             let task = URLSession.shared.dataTask(with: request){ data, response, error in
                 
                 guard let data = data, (response as? HTTPURLResponse)?.statusCode == 200 else {
@@ -34,7 +34,7 @@ extension TripView{
                 
                 do {
                     let decoder = JSONDecoder()
-                    let jsonData = try decoder.decode(TripModel.self, from: data)
+                    let jsonData = try decoder.decode(AllTypeModel.self, from: data)
                     
                         completionHandler(jsonData, nil)
                         return

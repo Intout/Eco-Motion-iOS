@@ -14,33 +14,122 @@ struct TripView: View {
     
    @ObservedObject var viewModel = ViewModel()
     @State var routes: [Route]?
-    @State var selection: Int?
+    @State var selection: UUID?
     
     var body: some View {
         GeometryReader{ geometry in
             ScrollView{
-                VStack(alignment: .leading, spacing: 60){
+                VStack(alignment: .leading, spacing: 20){
                     DestinationWidget(fromText: fromText, toText: toText)
-                        .padding(20)
-                    VStack{
-                        HStack{
-                            Text("Routes")
-                                .font(.custom("Charter", size: 30).bold())
-                                .foregroundColor(.gray)
-                            Spacer()
-                        }
-                        if let routes = self.viewModel.routes2{
-                            ForEach(routes, id: \.id){ route in
-                                NavigationLink(destination: TripMapView(route: route), tag: 2, selection: $selection){
-                                    RouteCard(route: route, toText: "")
-                                        .onTapGesture {
-                                            self.selection = 2
+                        .padding([.horizontal], 20)
+                    HStack{
+                        Text("Routes")
+                            .font(.custom("Charter", size: 30).bold())
+                            .foregroundColor(.gray)
+                        Spacer()
+                    }
+                    VStack(alignment: .leading){
+                        if let routes = self.viewModel.transitRoutes{
+                            if routes.count != 0{
+                                Text("Transit")
+                                    .font(.custom("Charter", size: 25).bold())
+                                    .foregroundColor(.gray)
+                                ScrollView(.horizontal,showsIndicators: false){
+                                    HStack{
+                                        ForEach(routes, id: \.id){ route in
+                                            NavigationLink(destination: TripMapView(route: route), tag: route.id, selection: $selection){
+                                                RouteCard(route: route, type: .transit ,toText: "")
+                                                
+                                                    .onTapGesture {
+                                                        self.selection = route.id
+                                                    }
+                                            }
+                                            .buttonStyle(.plain)
+                                            //.frame(minHeight: 50, maxHeight: 300)
+                                            .frame(width: 300)
+                                            Spacer()
+                                                .frame(height: 20)
                                         }
+                                    }
                                 }
-                                Spacer()
-                                    .frame(height: 20)
+                                .frame(minHeight: 50, maxHeight: 300)
                             }
                         }
+                        if let routes = self.viewModel.drivingRoutes{
+                            if routes.count != 0{
+                                Text("Driving")
+                                    .font(.custom("Charter", size: 25).bold())
+                                    .foregroundColor(.gray)
+                                ScrollView(.horizontal,showsIndicators: false){
+                                    HStack{
+                                        ForEach(routes, id: \.id){ route in
+                                            NavigationLink(destination: TripMapView(route: route), tag: route.id, selection: $selection){
+                                                RouteCard(route: route, type: .driving, toText: "")
+                                                    .onTapGesture {
+                                                        self.selection = route.id
+                                                    }
+                                            }
+                                            .buttonStyle(.plain)
+                                            .frame(width: 300)
+                                            Spacer()
+                                                .frame(height: 20)
+                                        }
+                                    }
+                                }
+                                .frame(minHeight: 50, maxHeight: 300)
+                            }
+                        }
+                        if let routes = self.viewModel.bicyclingRoutes  {
+                            if routes.count != 0{
+                                Text("Cycling")
+                                    .font(.custom("Charter", size: 25).bold())
+                                    .foregroundColor(.gray)
+                                ScrollView(.horizontal,showsIndicators: false){
+                                    HStack{
+                                        ForEach(routes, id: \.id){ route in
+                                            NavigationLink(destination: TripMapView(route: route), tag: route.id, selection: $selection){
+                                                RouteCard(route: route, type: .driving, toText: "")
+                                                    .onTapGesture {
+                                                        self.selection = route.id
+                                                    }
+                                            }
+                                            .buttonStyle(.plain)
+                                            
+                                            .frame(width: 300)
+                                            Spacer()
+                                                .frame(height: 20)
+                                        }
+                                    }
+                                }
+                                .frame(minHeight: 50, maxHeight: 300)
+                            }
+                        }
+                        if let routes = self.viewModel.walkingRoutes{
+                            if routes.count != 0{
+                                Text("Walking")
+                                    .font(.custom("Charter", size: 25).bold())
+                                    .foregroundColor(.gray)
+                                ScrollView(.horizontal,showsIndicators: false){
+                                    HStack{
+                                        ForEach(routes, id: \.id){ route in
+                                            NavigationLink(destination: TripMapView(route: route), tag: route.id, selection: $selection){
+                                                RouteCard(route: route, type: .walking, toText: "")
+                                                    .onTapGesture {
+                                                        
+                                                        self.selection = route.id
+                                                    }
+                                            }
+                                            .buttonStyle(.plain)
+                                            .frame(width: 300)
+                                            Spacer()
+                                                .frame(height: 20)
+                                        }
+                                    }
+                                }
+                                .frame(minHeight: 50, maxHeight: 300)
+                            }
+                        }
+
                         
                         
                     }

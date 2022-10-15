@@ -43,6 +43,8 @@ struct MapView: UIViewRepresentable{
                 marker.icon = UIImage(systemName: "figure.walk")
             case .transit:
                 marker.icon = UIImage(systemName: "bus.fill")
+            case .driving:
+                break
             case .none:
                 break
             }
