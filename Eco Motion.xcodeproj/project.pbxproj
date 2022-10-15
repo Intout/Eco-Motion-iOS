@@ -7,19 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009B398C28F9B99E0079B3DE /* LargeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B398B28F9B99E0079B3DE /* LargeButtonStyle.swift */; };
+		009B399328F9C1CE0079B3DE /* ContentView + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B399228F9C1CE0079B3DE /* ContentView + ViewModel.swift */; };
+		009B399628F9C4DC0079B3DE /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B399528F9C4DC0079B3DE /* TextFieldModifier.swift */; };
+		009B399828F9D4C00079B3DE /* TripPlannerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B399728F9D4C00079B3DE /* TripPlannerWidget.swift */; };
+		009B399B28F9D9680079B3DE /* Charter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 009B399A28F9D9680079B3DE /* Charter.ttc */; };
+		009B39A128F9E1BC0079B3DE /* Color + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A028F9E1BC0079B3DE /* Color + Extensions.swift */; };
+		009B39A328F9E7040079B3DE /* NavigationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A228F9E7040079B3DE /* NavigationWidget.swift */; };
+		009B39A528FA238B0079B3DE /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A428FA238A0079B3DE /* SuggestionCell.swift */; };
+		009B39A828FA25180079B3DE /* ContentView + DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A728FA25180079B3DE /* ContentView + DataModel.swift */; };
 		00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */; };
 		00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C628F9B30500DBE99C /* ContentView.swift */; };
 		00FD83C928F9B30700DBE99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD83C828F9B30700DBE99C /* Assets.xcassets */; };
 		00FD83CD28F9B30700DBE99C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD83CC28F9B30700DBE99C /* Preview Assets.xcassets */; };
+		00FD83DD28F9B77A00DBE99C /* WidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83DC28F9B77A00DBE99C /* WidgetBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009B398B28F9B99E0079B3DE /* LargeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonStyle.swift; sourceTree = "<group>"; };
+		009B399228F9C1CE0079B3DE /* ContentView + ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView + ViewModel.swift"; sourceTree = "<group>"; };
+		009B399528F9C4DC0079B3DE /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		009B399728F9D4C00079B3DE /* TripPlannerWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripPlannerWidget.swift; sourceTree = "<group>"; };
+		009B399A28F9D9680079B3DE /* Charter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charter.ttc; sourceTree = "<group>"; };
+		009B399C28F9DB4F0079B3DE /* Eco-Motion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Eco-Motion-Info.plist"; sourceTree = SOURCE_ROOT; };
+		009B39A028F9E1BC0079B3DE /* Color + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extensions.swift"; sourceTree = "<group>"; };
+		009B39A228F9E7040079B3DE /* NavigationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWidget.swift; sourceTree = "<group>"; };
+		009B39A428FA238A0079B3DE /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		009B39A728FA25180079B3DE /* ContentView + DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView + DataModel.swift"; sourceTree = "<group>"; };
 		00FD83C128F9B30500DBE99C /* Eco Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eco_MotionApp.swift; sourceTree = "<group>"; };
 		00FD83C628F9B30500DBE99C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00FD83C828F9B30700DBE99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FD83CA28F9B30700DBE99C /* Eco_Motion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eco_Motion.entitlements; sourceTree = "<group>"; };
 		00FD83CC28F9B30700DBE99C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00FD83DC28F9B77A00DBE99C /* WidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +54,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		009B398D28F9C09F0079B3DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				009B399728F9D4C00079B3DE /* TripPlannerWidget.swift */,
+				009B39A228F9E7040079B3DE /* NavigationWidget.swift */,
+				009B39A428FA238A0079B3DE /* SuggestionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		009B399428F9C4C20079B3DE /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				009B399528F9C4DC0079B3DE /* TextFieldModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		009B399928F9D9370079B3DE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				00FD83C828F9B30700DBE99C /* Assets.xcassets */,
+				009B399A28F9D9680079B3DE /* Charter.ttc */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		009B399F28F9E19D0079B3DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				009B39A028F9E1BC0079B3DE /* Color + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		009B39A628FA24EF0079B3DE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		00FD83B828F9B30500DBE99C = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +115,11 @@
 		00FD83C328F9B30500DBE99C /* Eco Motion */ = {
 			isa = PBXGroup;
 			children = (
+				009B399C28F9DB4F0079B3DE /* Eco-Motion-Info.plist */,
+				009B399928F9D9370079B3DE /* Assets */,
+				00FD83D528F9B42500DBE99C /* Common */,
+				00FD83D328F9B3E300DBE99C /* Scenes */,
 				00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */,
-				00FD83C628F9B30500DBE99C /* ContentView.swift */,
-				00FD83C828F9B30700DBE99C /* Assets.xcassets */,
 				00FD83CA28F9B30700DBE99C /* Eco_Motion.entitlements */,
 				00FD83CB28F9B30700DBE99C /* Preview Content */,
 			);
@@ -67,6 +132,53 @@
 				00FD83CC28F9B30700DBE99C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		00FD83D328F9B3E300DBE99C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				00FD83D428F9B40500DBE99C /* ContentView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		00FD83D428F9B40500DBE99C /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				009B39A628FA24EF0079B3DE /* Entities */,
+				009B398D28F9C09F0079B3DE /* Views */,
+				00FD83C628F9B30500DBE99C /* ContentView.swift */,
+				009B399228F9C1CE0079B3DE /* ContentView + ViewModel.swift */,
+				009B39A728FA25180079B3DE /* ContentView + DataModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		00FD83D528F9B42500DBE99C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				009B399F28F9E19D0079B3DE /* Extensions */,
+				009B399428F9C4C20079B3DE /* Modifiers */,
+				00FD83DB28F9B75000DBE99C /* UI Components */,
+				00FD83D628F9B43600DBE99C /* Styles */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		00FD83D628F9B43600DBE99C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				009B398B28F9B99E0079B3DE /* LargeButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		00FD83DB28F9B75000DBE99C /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				00FD83DC28F9B77A00DBE99C /* WidgetBackgroundView.swift */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +241,7 @@
 			files = (
 				00FD83CD28F9B30700DBE99C /* Preview Assets.xcassets in Resources */,
 				00FD83C928F9B30700DBE99C /* Assets.xcassets in Resources */,
+				009B399B28F9D9680079B3DE /* Charter.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +253,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */,
+				009B398C28F9B99E0079B3DE /* LargeButtonStyle.swift in Sources */,
+				00FD83DD28F9B77A00DBE99C /* WidgetBackgroundView.swift in Sources */,
+				009B39A828FA25180079B3DE /* ContentView + DataModel.swift in Sources */,
+				009B39A528FA238B0079B3DE /* SuggestionCell.swift in Sources */,
+				009B399628F9C4DC0079B3DE /* TextFieldModifier.swift in Sources */,
 				00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */,
+				009B39A328F9E7040079B3DE /* NavigationWidget.swift in Sources */,
+				009B39A128F9E1BC0079B3DE /* Color + Extensions.swift in Sources */,
+				009B399828F9D4C00079B3DE /* TripPlannerWidget.swift in Sources */,
+				009B399328F9C1CE0079B3DE /* ContentView + ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +391,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Eco-Motion-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -277,8 +400,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -307,6 +430,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Eco-Motion-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -315,8 +439,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
