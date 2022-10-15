@@ -29,15 +29,36 @@ struct MapView: UIViewRepresentable{
     
     var leg: Leg
     func makeUIView(context: Context) -> GMSMapView {
-        let camera = GMSCameraPosition.camera(withLatitude: leg.startLocation!.lat!, longitude: leg.endLocation!.lng!, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: leg.startLocation!.lat!, longitude: leg.endLocation!.lng!, zoom: 10)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
        
+        var polyline: GMSPolyline
+        for step in leg.steps!{
+            
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: step.endLocation!.lat!, longitude: step.endLocation!.lng!)
+            
+            switch step.travelMode{
+            case .walking:
+                marker.icon = UIImage(systemName: "figure.walk")
+            case .transit:
+                marker.icon = UIImage(systemName: "bus.fill")
+            case .none:
+                break
+            }
+            
+            marker.map = mapView
+            
         
-        var path = GMSPath(fromEncodedPath: leg.steps!.first!.polyline!.points!)
-        let polyline = GMSPolyline(path: path)
-        polyline.strokeColor = .black
-        polyline.strokeWidth = 10.0
-        polyline.map = mapView
+            
+            var path = GMSPath(fromEncodedPath: step.polyline!.points!)
+            polyline = GMSPolyline(path: path)
+            polyline.strokeColor = .blue
+            polyline.strokeWidth = 2.0
+            polyline.map = mapView
+        }
+        
+        
         
         /*
         let marker = GMSMarker()
