@@ -16,13 +16,13 @@ struct TextFieldModifier: ViewModifier {
         VStack(spacing: 5) {
             HStack(){
             Text(placeHolderText)
-                    .font(.custom("Charter", size: 20).bold())
+                    .font(.custom("Charter", size: 20))
                 .foregroundColor(startColor)
                 Divider()
                     .foregroundColor(startColor)
                 content
                     .foregroundColor(textColor)
-                    .font(.custom("Charter", size: 20))
+                    .font(.custom("Charter", size: 20).bold())
             }
             Rectangle()
                 .foregroundColor(.gray)

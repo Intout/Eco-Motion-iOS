@@ -16,6 +16,15 @@
 		009B39A328F9E7040079B3DE /* NavigationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A228F9E7040079B3DE /* NavigationWidget.swift */; };
 		009B39A528FA238B0079B3DE /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A428FA238A0079B3DE /* SuggestionCell.swift */; };
 		009B39A828FA25180079B3DE /* ContentView + DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39A728FA25180079B3DE /* ContentView + DataModel.swift */; };
+		009B39AD28FA52570079B3DE /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39AC28FA52560079B3DE /* TripView.swift */; };
+		009B39AF28FA52670079B3DE /* TripView + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39AE28FA52670079B3DE /* TripView + ViewModel.swift */; };
+		009B39B128FA551C0079B3DE /* LabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B028FA551C0079B3DE /* LabelModifier.swift */; };
+		009B39B428FA56760079B3DE /* DestinationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B328FA56760079B3DE /* DestinationWidget.swift */; };
+		009B39B628FA5AF30079B3DE /* TripViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B528FA5AF30079B3DE /* TripViewEntity.swift */; };
+		009B39B828FA5B820079B3DE /* TripView + DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B728FA5B820079B3DE /* TripView + DataModel.swift */; };
+		009B39BA28FA79950079B3DE /* RouteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B928FA79950079B3DE /* RouteCard.swift */; };
+		009B39BE28FAA4980079B3DE /* TripView + NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */; };
+		009B39C128FAA7C10079B3DE /* MMapKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39C028FAA7C10079B3DE /* MMapKitManager.swift */; };
 		00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */; };
 		00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C628F9B30500DBE99C /* ContentView.swift */; };
 		00FD83C928F9B30700DBE99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD83C828F9B30700DBE99C /* Assets.xcassets */; };
@@ -34,6 +43,15 @@
 		009B39A228F9E7040079B3DE /* NavigationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWidget.swift; sourceTree = "<group>"; };
 		009B39A428FA238A0079B3DE /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
 		009B39A728FA25180079B3DE /* ContentView + DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView + DataModel.swift"; sourceTree = "<group>"; };
+		009B39AC28FA52560079B3DE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		009B39AE28FA52670079B3DE /* TripView + ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripView + ViewModel.swift"; sourceTree = "<group>"; };
+		009B39B028FA551C0079B3DE /* LabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelModifier.swift; sourceTree = "<group>"; };
+		009B39B328FA56760079B3DE /* DestinationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationWidget.swift; sourceTree = "<group>"; };
+		009B39B528FA5AF30079B3DE /* TripViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewEntity.swift; sourceTree = "<group>"; };
+		009B39B728FA5B820079B3DE /* TripView + DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripView + DataModel.swift"; sourceTree = "<group>"; };
+		009B39B928FA79950079B3DE /* RouteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCard.swift; sourceTree = "<group>"; };
+		009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripView + NetworkModel.swift"; sourceTree = "<group>"; };
+		009B39C028FAA7C10079B3DE /* MMapKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMapKitManager.swift; sourceTree = "<group>"; };
 		00FD83C128F9B30500DBE99C /* Eco Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eco_MotionApp.swift; sourceTree = "<group>"; };
 		00FD83C628F9B30500DBE99C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				009B399528F9C4DC0079B3DE /* TextFieldModifier.swift */,
+				009B39B028FA551C0079B3DE /* LabelModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -94,6 +113,44 @@
 			children = (
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		009B39AA28FA522D0079B3DE /* TripView */ = {
+			isa = PBXGroup;
+			children = (
+				009B39AB28FA52370079B3DE /* Entities */,
+				009B39B228FA56270079B3DE /* Views */,
+				009B39AC28FA52560079B3DE /* TripView.swift */,
+				009B39AE28FA52670079B3DE /* TripView + ViewModel.swift */,
+				009B39B728FA5B820079B3DE /* TripView + DataModel.swift */,
+				009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */,
+			);
+			path = TripView;
+			sourceTree = "<group>";
+		};
+		009B39AB28FA52370079B3DE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				009B39B528FA5AF30079B3DE /* TripViewEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		009B39B228FA56270079B3DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				009B39B328FA56760079B3DE /* DestinationWidget.swift */,
+				009B39B928FA79950079B3DE /* RouteCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		009B39BF28FAA7AE0079B3DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				009B39C028FAA7C10079B3DE /* MMapKitManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		00FD83B828F9B30500DBE99C = {
@@ -137,6 +194,7 @@
 		00FD83D328F9B3E300DBE99C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				009B39AA28FA522D0079B3DE /* TripView */,
 				00FD83D428F9B40500DBE99C /* ContentView */,
 			);
 			path = Scenes;
@@ -157,6 +215,7 @@
 		00FD83D528F9B42500DBE99C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				009B39BF28FAA7AE0079B3DE /* Managers */,
 				009B399F28F9E19D0079B3DE /* Extensions */,
 				009B399428F9C4C20079B3DE /* Modifiers */,
 				00FD83DB28F9B75000DBE99C /* UI Components */,
@@ -253,15 +312,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */,
+				009B39C128FAA7C10079B3DE /* MMapKitManager.swift in Sources */,
+				009B39B128FA551C0079B3DE /* LabelModifier.swift in Sources */,
 				009B398C28F9B99E0079B3DE /* LargeButtonStyle.swift in Sources */,
 				00FD83DD28F9B77A00DBE99C /* WidgetBackgroundView.swift in Sources */,
+				009B39AD28FA52570079B3DE /* TripView.swift in Sources */,
 				009B39A828FA25180079B3DE /* ContentView + DataModel.swift in Sources */,
+				009B39B828FA5B820079B3DE /* TripView + DataModel.swift in Sources */,
+				009B39B628FA5AF30079B3DE /* TripViewEntity.swift in Sources */,
 				009B39A528FA238B0079B3DE /* SuggestionCell.swift in Sources */,
+				009B39AF28FA52670079B3DE /* TripView + ViewModel.swift in Sources */,
 				009B399628F9C4DC0079B3DE /* TextFieldModifier.swift in Sources */,
 				00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */,
+				009B39B428FA56760079B3DE /* DestinationWidget.swift in Sources */,
+				009B39BA28FA79950079B3DE /* RouteCard.swift in Sources */,
 				009B39A328F9E7040079B3DE /* NavigationWidget.swift in Sources */,
 				009B39A128F9E1BC0079B3DE /* Color + Extensions.swift in Sources */,
 				009B399828F9D4C00079B3DE /* TripPlannerWidget.swift in Sources */,
+				009B39BE28FAA4980079B3DE /* TripView + NetworkModel.swift in Sources */,
 				009B399328F9C1CE0079B3DE /* ContentView + ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,9 +457,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Eco Motion/Preview Content\"";
 				DEVELOPMENT_TEAM = R2MF39ASQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Eco-Motion-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Need Location\"";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -428,9 +498,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Eco Motion/Preview Content\"";
 				DEVELOPMENT_TEAM = R2MF39ASQT;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Eco-Motion-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Need Location\"";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

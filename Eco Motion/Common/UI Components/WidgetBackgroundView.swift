@@ -10,6 +10,7 @@ import SwiftUI
 struct WidgetBackgroundView: View {
     
     var backgroundImage: Image?
+    var backgroundColor: Color = .widgetBackgroundColor
     var cornerRadius: CGFloat = 30
     
     var body: some View {
@@ -24,7 +25,7 @@ struct WidgetBackgroundView: View {
             } else {
             Rectangle()
                 .cornerRadius(cornerRadius)
-                .foregroundColor(.widgetBackgroundColor)
+                .foregroundColor(backgroundColor)
             }
             
         }
