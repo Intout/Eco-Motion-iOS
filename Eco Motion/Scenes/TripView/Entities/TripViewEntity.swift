@@ -144,6 +144,8 @@ enum Maneuver: String, Codable {
     case turnSharpLeft = "turn-sharp-left"
     case turnSlightRight = "turn-slight-right"
     case turnSlightLeft = "turn-slight-left"
+    case roundaboutRight = "roundabout-right"
+    case roundaboutLeft = "roundabout-Left"
 }
 
 // MARK: - Polyline

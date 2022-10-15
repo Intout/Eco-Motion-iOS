@@ -89,7 +89,7 @@ struct RouteCard: View {
             Spacer()
                 .frame(height: 50)
             HStack{
-                Text("\(String(describing: route.co2))")
+                Text("\(route.co2 ?? -1) kg/\(route.legs?.first?.distance?.text?.contains("km") ?? true ? "km" : "mi")")
                     .font(.custom("Charter", size: 25)).bold()
                 Spacer()
             }

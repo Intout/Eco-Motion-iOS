@@ -25,11 +25,13 @@
 		009B39BA28FA79950079B3DE /* RouteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B928FA79950079B3DE /* RouteCard.swift */; };
 		009B39BE28FAA4980079B3DE /* TripView + NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */; };
 		009B39C128FAA7C10079B3DE /* MMapKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39C028FAA7C10079B3DE /* MMapKitManager.swift */; };
+		00E9CE2E28FAF05E0025D817 /* TripMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9CE2D28FAF05E0025D817 /* TripMapView.swift */; };
 		00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */; };
 		00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C628F9B30500DBE99C /* ContentView.swift */; };
 		00FD83C928F9B30700DBE99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD83C828F9B30700DBE99C /* Assets.xcassets */; };
 		00FD83CD28F9B30700DBE99C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FD83CC28F9B30700DBE99C /* Preview Assets.xcassets */; };
 		00FD83DD28F9B77A00DBE99C /* WidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83DC28F9B77A00DBE99C /* WidgetBackgroundView.swift */; };
+		82C0FCC77D12E3974DF6FD7D /* libPods-Eco Motion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DEB90B5B4080ADB986F30F /* libPods-Eco Motion.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,7 @@
 		009B39B928FA79950079B3DE /* RouteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCard.swift; sourceTree = "<group>"; };
 		009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripView + NetworkModel.swift"; sourceTree = "<group>"; };
 		009B39C028FAA7C10079B3DE /* MMapKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMapKitManager.swift; sourceTree = "<group>"; };
+		00E9CE2D28FAF05E0025D817 /* TripMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapView.swift; sourceTree = "<group>"; };
 		00FD83C128F9B30500DBE99C /* Eco Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eco_MotionApp.swift; sourceTree = "<group>"; };
 		00FD83C628F9B30500DBE99C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		00FD83CA28F9B30700DBE99C /* Eco_Motion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eco_Motion.entitlements; sourceTree = "<group>"; };
 		00FD83CC28F9B30700DBE99C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00FD83DC28F9B77A00DBE99C /* WidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundView.swift; sourceTree = "<group>"; };
+		71B698BC1ADA099DED3B1017 /* Pods-Eco Motion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco Motion.release.xcconfig"; path = "Target Support Files/Pods-Eco Motion/Pods-Eco Motion.release.xcconfig"; sourceTree = "<group>"; };
+		C5DEB90B5B4080ADB986F30F /* libPods-Eco Motion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eco Motion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB119A169BAF29479BEE377E /* Pods-Eco Motion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eco Motion.debug.xcconfig"; path = "Target Support Files/Pods-Eco Motion/Pods-Eco Motion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C0FCC77D12E3974DF6FD7D /* libPods-Eco Motion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,11 +160,21 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		00E9CE2C28FAF0420025D817 /* TripMapView */ = {
+			isa = PBXGroup;
+			children = (
+				00E9CE2D28FAF05E0025D817 /* TripMapView.swift */,
+			);
+			path = TripMapView;
+			sourceTree = "<group>";
+		};
 		00FD83B828F9B30500DBE99C = {
 			isa = PBXGroup;
 			children = (
 				00FD83C328F9B30500DBE99C /* Eco Motion */,
 				00FD83C228F9B30500DBE99C /* Products */,
+				F07DD56AD3085F4FDDE46070 /* Pods */,
+				7AE6AC55A8115F3E76AD532F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +211,7 @@
 		00FD83D328F9B3E300DBE99C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00E9CE2C28FAF0420025D817 /* TripMapView */,
 				009B39AA28FA522D0079B3DE /* TripView */,
 				00FD83D428F9B40500DBE99C /* ContentView */,
 			);
@@ -240,6 +258,23 @@
 			path = "UI Components";
 			sourceTree = "<group>";
 		};
+		7AE6AC55A8115F3E76AD532F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5DEB90B5B4080ADB986F30F /* libPods-Eco Motion.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F07DD56AD3085F4FDDE46070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB119A169BAF29479BEE377E /* Pods-Eco Motion.debug.xcconfig */,
+				71B698BC1ADA099DED3B1017 /* Pods-Eco Motion.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00FD83D028F9B30700DBE99C /* Build configuration list for PBXNativeTarget "Eco Motion" */;
 			buildPhases = (
+				235D9643274DD87259E1D28D /* [CP] Check Pods Manifest.lock */,
 				00FD83BD28F9B30500DBE99C /* Sources */,
 				00FD83BE28F9B30500DBE99C /* Frameworks */,
 				00FD83BF28F9B30500DBE99C /* Resources */,
+				ABB178563F9015AD565723E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +343,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		235D9643274DD87259E1D28D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eco Motion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB178563F9015AD565723E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco Motion/Pods-Eco Motion-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eco Motion/Pods-Eco Motion-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eco Motion/Pods-Eco Motion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00FD83BD28F9B30500DBE99C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -325,6 +404,7 @@
 				009B399628F9C4DC0079B3DE /* TextFieldModifier.swift in Sources */,
 				00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */,
 				009B39B428FA56760079B3DE /* DestinationWidget.swift in Sources */,
+				00E9CE2E28FAF05E0025D817 /* TripMapView.swift in Sources */,
 				009B39BA28FA79950079B3DE /* RouteCard.swift in Sources */,
 				009B39A328F9E7040079B3DE /* NavigationWidget.swift in Sources */,
 				009B39A128F9E1BC0079B3DE /* Color + Extensions.swift in Sources */,
@@ -448,6 +528,7 @@
 		};
 		00FD83D128F9B30700DBE99C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB119A169BAF29479BEE377E /* Pods-Eco Motion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +543,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Eco-Motion-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Need Location\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Need Location\"";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -477,7 +559,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Mert-Tecimen.Eco-Motion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mert-Tecimen.Eco-Motion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -489,6 +571,7 @@
 		};
 		00FD83D228F9B30700DBE99C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B698BC1ADA099DED3B1017 /* Pods-Eco Motion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +586,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Eco-Motion-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"Need Location\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Need Location\"";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -518,7 +602,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Mert-Tecimen.Eco-Motion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mert-Tecimen.Eco-Motion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

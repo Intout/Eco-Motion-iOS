@@ -14,6 +14,7 @@ struct TripView: View {
     
    @ObservedObject var viewModel = ViewModel()
     @State var routes: [Route]?
+    @State var selection: Int?
     
     var body: some View {
         GeometryReader{ geometry in
@@ -30,13 +31,18 @@ struct TripView: View {
                         }
                         if let routes = self.viewModel.routes2{
                             ForEach(routes, id: \.id){ route in
-                                RouteCard(route: route, toText: "")
+                                NavigationLink(destination: TripMapView(route: route), tag: 2, selection: $selection){
+                                    RouteCard(route: route, toText: "")
+                                        .onTapGesture {
+                                            self.selection = 2
+                                        }
+                                }
                                 Spacer()
                                     .frame(height: 20)
                             }
                         }
-                    
-                    
+                        
+                        
                     }
                     .padding([.horizontal, .top], 20)
                     .background(WidgetBackgroundView())
