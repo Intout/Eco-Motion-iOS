@@ -8,9 +8,10 @@
 import Foundation
 import MapKit
 import CoreLocation
-class MMapKitManager: NSObject, CLLocationManagerDelegate{
+class MMapKitManager: NSObject, CLLocationManagerDelegate, ObservableObject{
     
     let locationManager = CLLocationManager()
+    @Published var currentLocation: CLLocationCoordinate2D?
     
     override init() {
         super.init()
@@ -28,7 +29,9 @@ class MMapKitManager: NSObject, CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first{
-            print(location)
+            DispatchQueue.main.async{
+                self.currentLocation = .init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            }
         }
     }
     

@@ -31,9 +31,18 @@ struct TripView: View {
                     VStack(alignment: .leading){
                         if let routes = self.viewModel.transitRoutes{
                             if routes.count != 0{
-                                Text("Transit")
-                                    .font(.custom("Charter", size: 25).bold())
-                                    .foregroundColor(.gray)
+                                HStack{
+                                    Text("Transit")
+                                        .font(.custom("Charter", size: 25).bold())
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Image(systemName: "bus.fill")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.gray)
+                                    
+                                }
+                                
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -57,9 +66,17 @@ struct TripView: View {
                         }
                         if let routes = self.viewModel.drivingRoutes{
                             if routes.count != 0{
-                                Text("Driving")
-                                    .font(.custom("Charter", size: 25).bold())
-                                    .foregroundColor(.gray)
+                                HStack{
+                                    Text("Driving")
+                                        .font(.custom("Charter", size: 25).bold())
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Image(systemName: "car.fill")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.gray)
+                                    
+                                }
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -81,9 +98,17 @@ struct TripView: View {
                         }
                         if let routes = self.viewModel.bicyclingRoutes  {
                             if routes.count != 0{
-                                Text("Cycling")
-                                    .font(.custom("Charter", size: 25).bold())
-                                    .foregroundColor(.gray)
+                                HStack{
+                                    Text("Cycling")
+                                        .font(.custom("Charter", size: 25).bold())
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Image(systemName: "bicycle")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.gray)
+                                    
+                                }
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -106,9 +131,17 @@ struct TripView: View {
                         }
                         if let routes = self.viewModel.walkingRoutes{
                             if routes.count != 0{
-                                Text("Walking")
-                                    .font(.custom("Charter", size: 25).bold())
-                                    .foregroundColor(.gray)
+                                HStack{
+                                    Text("Walking")
+                                        .font(.custom("Charter", size: 25).bold())
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                    Image(systemName: "figure.walk")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.gray)
+                                    
+                                }
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
