@@ -20,28 +20,26 @@ struct TripView: View {
         GeometryReader{ geometry in
             ScrollView{
                 VStack(alignment: .leading, spacing: 20){
-                    DestinationWidget(fromText: fromText, toText: toText)
-                        .padding([.horizontal], 20)
                     HStack{
                         Text("Routes")
                             .font(.custom("Charter", size: 30).bold())
                             .foregroundColor(.gray)
                         Spacer()
                     }
-                    VStack(alignment: .leading){
+                    .padding([.horizontal], 20)
+                    VStack(alignment: .leading, spacing: 20){
+                        DestinationWidget(fromText: fromText, toText: toText)
                         if let routes = self.viewModel.transitRoutes{
                             if routes.count != 0{
                                 HStack{
-                                    Text("Transit")
-                                        .font(.custom("Charter", size: 25).bold())
-                                        .foregroundColor(.gray)
-                                    Spacer()
                                     Image(systemName: "bus.fill")
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.gray)
+                                    Spacer()
                                     
                                 }
+                                .padding([.horizontal], 20)
                                 
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
@@ -61,22 +59,21 @@ struct TripView: View {
                                         }
                                     }
                                 }
+                                .padding([.horizontal], 20)
                                 .frame(minHeight: 50, maxHeight: 300)
                             }
                         }
                         if let routes = self.viewModel.drivingRoutes{
                             if routes.count != 0{
                                 HStack{
-                                    Text("Driving")
-                                        .font(.custom("Charter", size: 25).bold())
-                                        .foregroundColor(.gray)
-                                    Spacer()
                                     Image(systemName: "car.fill")
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.gray)
+                                    Spacer()
                                     
                                 }
+                                .padding([.horizontal], 20)
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -93,22 +90,21 @@ struct TripView: View {
                                         }
                                     }
                                 }
+                                .padding([.horizontal], 20)
                                 .frame(minHeight: 50, maxHeight: 300)
                             }
                         }
                         if let routes = self.viewModel.bicyclingRoutes  {
                             if routes.count != 0{
                                 HStack{
-                                    Text("Cycling")
-                                        .font(.custom("Charter", size: 25).bold())
-                                        .foregroundColor(.gray)
-                                    Spacer()
                                     Image(systemName: "bicycle")
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.gray)
+                                    Spacer()
                                     
                                 }
+                                .padding([.horizontal], 20)
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -126,22 +122,21 @@ struct TripView: View {
                                         }
                                     }
                                 }
+                                .padding([.horizontal], 20)
                                 .frame(minHeight: 50, maxHeight: 300)
                             }
                         }
                         if let routes = self.viewModel.walkingRoutes{
                             if routes.count != 0{
                                 HStack{
-                                    Text("Walking")
-                                        .font(.custom("Charter", size: 25).bold())
-                                        .foregroundColor(.gray)
-                                    Spacer()
                                     Image(systemName: "figure.walk")
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.gray)
+                                    Spacer()
                                     
                                 }
+                                .padding([.horizontal], 20)
                                 ScrollView(.horizontal,showsIndicators: false){
                                     HStack{
                                         ForEach(routes, id: \.id){ route in
@@ -159,6 +154,7 @@ struct TripView: View {
                                         }
                                     }
                                 }
+                                .padding([.horizontal], 20)
                                 .frame(minHeight: 50, maxHeight: 300)
                             }
                         }
@@ -166,7 +162,6 @@ struct TripView: View {
                         
                         
                     }
-                    .padding([.horizontal, .top], 20)
                     .background(WidgetBackgroundView())
                 }
                 

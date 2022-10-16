@@ -19,9 +19,8 @@ struct DestinationWidget: View {
             Text(toText)
                 .modifier(LabelModifier(titleText: "To", textColor: .green))
         }
-        .padding([.horizontal], 20)
-        .padding([.vertical], 30)
-        .background(WidgetBackgroundView())
+        .padding()
+        .background(WidgetBackgroundView(backgroundImage: Image("MapWidgetBackground")), alignment: .bottomLeading)
     }
 }
 

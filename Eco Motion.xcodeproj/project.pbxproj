@@ -25,6 +25,7 @@
 		009B39BA28FA79950079B3DE /* RouteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39B928FA79950079B3DE /* RouteCard.swift */; };
 		009B39BE28FAA4980079B3DE /* TripView + NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */; };
 		009B39C128FAA7C10079B3DE /* MMapKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009B39C028FAA7C10079B3DE /* MMapKitManager.swift */; };
+		00CAF66128FBE6B000442227 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF66028FBE6B000442227 /* StatsView.swift */; };
 		00E9CE2E28FAF05E0025D817 /* TripMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9CE2D28FAF05E0025D817 /* TripMapView.swift */; };
 		00FD83C528F9B30500DBE99C /* Eco_MotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */; };
 		00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD83C628F9B30500DBE99C /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 		009B39B928FA79950079B3DE /* RouteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCard.swift; sourceTree = "<group>"; };
 		009B39BD28FAA4980079B3DE /* TripView + NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripView + NetworkModel.swift"; sourceTree = "<group>"; };
 		009B39C028FAA7C10079B3DE /* MMapKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMapKitManager.swift; sourceTree = "<group>"; };
+		00CAF66028FBE6B000442227 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		00E9CE2D28FAF05E0025D817 /* TripMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapView.swift; sourceTree = "<group>"; };
 		00FD83C128F9B30500DBE99C /* Eco Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FD83C428F9B30500DBE99C /* Eco_MotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eco_MotionApp.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		00CAF65F28FBE69C00442227 /* StatsView */ = {
+			isa = PBXGroup;
+			children = (
+				00CAF66028FBE6B000442227 /* StatsView.swift */,
+			);
+			path = StatsView;
+			sourceTree = "<group>";
+		};
 		00E9CE2C28FAF0420025D817 /* TripMapView */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 		00FD83D328F9B3E300DBE99C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00CAF65F28FBE69C00442227 /* StatsView */,
 				00E9CE2C28FAF0420025D817 /* TripMapView */,
 				009B39AA28FA522D0079B3DE /* TripView */,
 				00FD83D428F9B40500DBE99C /* ContentView */,
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CAF66128FBE6B000442227 /* StatsView.swift in Sources */,
 				00FD83C728F9B30500DBE99C /* ContentView.swift in Sources */,
 				009B39C128FAA7C10079B3DE /* MMapKitManager.swift in Sources */,
 				009B39B128FA551C0079B3DE /* LabelModifier.swift in Sources */,

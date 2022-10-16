@@ -13,14 +13,14 @@ import GoogleMaps
 
 struct TripMapView: View {
     
-    var route: Route?
+    var route: RouteModel?
     @ObservedObject var mapManager = MMapKitManager()
     @State var navigate: Bool = false
     
     var body: some View {
-        if let leg = route?.legs?.first{
+        if let leg = route?.route.legs?.first{
             ZStack{
-                MapView(leg: leg, currentLocation: mapManager.currentLocation, navigate: $navigate)
+                MapView(leg: leg, currentLocation: mapManager.currentLocation, navigate: $navigate, color: route?.color, type: route!.type)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack{
@@ -63,6 +63,8 @@ struct MapView: UIViewRepresentable{
     var leg: Leg
     var currentLocation: CLLocationCoordinate2D?
     @Binding var navigate: Bool
+    var color: Color?
+    var type: TravelMode
     
     func makeUIView(context: Context) -> GMSMapView {
         let camera = GMSCameraPosition.camera(withLatitude: leg.startLocation!.lat!, longitude: leg.endLocation!.lng!, zoom: 10)
@@ -74,23 +76,28 @@ struct MapView: UIViewRepresentable{
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: step.endLocation!.lat!, longitude: step.endLocation!.lng!)
             
-            switch step.travelMode{
-            case .walking:
-                marker.icon = UIImage(systemName: "figure.walk")
-            case .transit:
-                marker.icon = UIImage(systemName: "bus.fill")
-            case .driving:
-                break
-            case .none:
-                break
+            if type == .transit{
+                
+                switch step.travelMode{
+                case .walking:
+                    marker.icon = UIImage(systemName: "figure.walk")
+                case .transit:
+                    marker.icon = UIImage(systemName: "bus.fill")
+                case .driving:
+                    break
+                case .none:
+                    break
+                case .some(.cycling):
+                    break
+                }
+                marker.map = mapView
             }
-            
-            marker.map = mapView
+        
             
             
             var path = GMSPath(fromEncodedPath: step.polyline!.points!)
             polyline = GMSPolyline(path: path)
-            polyline.strokeColor = .blue
+            polyline.strokeColor = UIColor(color ?? .blue)
             polyline.strokeWidth = 2.0
             polyline.map = mapView
         }

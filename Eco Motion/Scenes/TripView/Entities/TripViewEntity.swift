@@ -231,6 +231,7 @@ enum TravelMode: String, Codable {
     case transit = "TRANSIT"
     case walking = "WALKING"
     case driving = "DRIVING"
+    case cycling = "CYCLING"
 }
 
 // MARK: - Encode/decode helpers

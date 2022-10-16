@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RouteCard: View {
     
-    var route: Route
+    var route: RouteModel
     var type: TravelMode
     var toText: String
     private let columns = [
@@ -18,7 +18,7 @@ struct RouteCard: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Route 1")
+            Text(route.name)
                 .font(.custom("Charter", size: 20)).bold()
             Rectangle()
                 .frame(height: 2)
@@ -29,7 +29,7 @@ struct RouteCard: View {
                         .font(.custom("Charter", size: 15))
                         .foregroundColor(.gray)
                     Spacer()
-                    Text("\(route.legs?.first?.arrivalTime?.text ?? "-")")
+                    Text("\(route.route.legs?.first?.arrivalTime?.text ?? "-")")
                         .font(.custom("Charter", size: 15)).bold()
                 }
             }
@@ -37,13 +37,13 @@ struct RouteCard: View {
                 Text("Duration:")
                     .font(.custom("Charter", size: 15))
                 Spacer()
-                Text("\(route.legs?.first?.duration?.text ?? "-")")
+                Text("\(route.route.legs?.first?.duration?.text ?? "-")")
                     .font(.custom("Charter", size: 15)).bold()
             }
             
             VStack{
                 
-                if let legs = self.route.legs, type == .transit{
+                if let legs = self.route.route.legs, type == .transit{
                     ForEach(legs, id: \.id){ leg in
                     LazyVGrid(  columns: [
                         // 3
@@ -73,6 +73,11 @@ struct RouteCard: View {
                                                 .frame(width: 20, height: 20)
                                                 .foregroundColor(.blue)
                                             
+                                        case .cycling:
+                                            Image(systemName: "bicycle")
+                                                .resizable()
+                                                .frame(width: 20, height: 20)
+                                                .foregroundColor(.blue)
                                         }
                                     }
                                     VStack(alignment: .leading ,spacing: 0){
@@ -98,9 +103,9 @@ struct RouteCard: View {
                 Spacer()
             }
             HStack{
-                Text("\(route.co2 ?? -1) kg/\(route.legs?.first?.distance?.text?.contains("km") ?? true ? "km" : "mi")")
+                Text("\(route.route.co2 ?? -1) kg/\(route.route.legs?.first?.distance?.text?.contains("km") ?? true ? "km" : "mi")")
                     .font(.custom("Charter", size: 20)).bold()
-                    .foregroundColor(.gray)
+                    .foregroundColor(route.color)
                 Spacer()
             }
         }
