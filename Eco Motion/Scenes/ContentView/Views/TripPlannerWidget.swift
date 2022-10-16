@@ -19,9 +19,10 @@ struct TripPlannerWidget: View {
         VStack(spacing: 10){
 
             TextField("", text: self.$destinationFrom)
-                .modifier(TextFieldModifier(startColor: .blue, endColor: .blue, textColor: .blue, placeHolderText: "From"))
+                
+                .modifier(TextFieldModifier(startColor: .blue, endColor: .blue, textColor: .blue, placeHolderText: "From", textFieldPlaceHolder: "Current Location", isAvailable: $destinationFrom))
             TextField("", text: self.$destinationTo)
-                .modifier(TextFieldModifier(startColor: .green, endColor: .green, textColor: .green, placeHolderText: "To"))
+                .modifier(TextFieldModifier(startColor: .green, endColor: .green, textColor: .green, placeHolderText: "To", isAvailable: $destinationTo))
             NavigationLink(destination: TripView(toText: self.destinationTo), tag: 1, selection: $selection){
                 Button("Routes"){
                     

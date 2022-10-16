@@ -12,6 +12,8 @@ struct TextFieldModifier: ViewModifier {
     var endColor: Color
     var textColor: Color
     var placeHolderText: String
+    var textFieldPlaceHolder: String?
+    @Binding var isAvailable: String
     func body(content: Content) -> some View {
         VStack(spacing: 5) {
             HStack(){
@@ -20,9 +22,17 @@ struct TextFieldModifier: ViewModifier {
                 .foregroundColor(startColor)
                 Divider()
                     .foregroundColor(startColor)
-                content
-                    .foregroundColor(textColor)
-                    .font(.custom("Charter", size: 20).bold())
+                ZStack(alignment: .leading){
+                    if let text = textFieldPlaceHolder{
+                        if isAvailable.isEmpty{
+                            Text(text)
+                                .foregroundColor(startColor.opacity(0.5))
+                        }
+                    }
+                    content
+                        .foregroundColor(textColor)
+                        .font(.custom("Charter", size: 20).bold())
+                }
             }
             Rectangle()
                 .foregroundColor(.gray)
